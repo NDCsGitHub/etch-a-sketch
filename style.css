@@ -1,0 +1,169 @@
+:root{
+    --rows:1;
+    --columns:1;
+}
+
+body{
+    background: linear-gradient(45deg, rgb(235, 209, 123), rgb(90, 241, 166));
+
+
+}
+
+h1{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 35px;
+    margin: 25px;
+}
+
+/* buttons */
+.buttonContainer{
+    display: flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+    max-width: 1000px;
+    margin:auto;
+    flex-wrap:wrap;
+    align-items: center;
+}
+
+.gridSize{
+    border:rgb(105, 105, 102) solid 5px;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+    color:rgb(105, 105, 102) ;
+    background-color:rgb(211, 190, 190);
+    font-weight: bold;
+
+}
+
+.buttonColor{
+    padding-bottom: 10px;
+}
+
+.buttonRestart{
+    padding-bottom: 10px;
+}
+
+.colors{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+.colors:hover{
+    scale: 1.3;
+    border: solid 3px rgb(203, 187, 223)
+}
+
+.buttonAnimation{
+    scale: 1.3;
+    border: solid 3px rgb(203, 187, 223);
+}
+
+
+#colorBlack{
+    font-weight: bold;
+    color:white;
+    background-color: black;
+    border-radius: 30px;
+    width: 100px;
+    height:50px;
+    font-size: 18px;
+    
+    
+}
+
+#colorGrey{
+    font-weight: bold;
+    color:white;
+    background-color: grey;
+    border-radius: 30px;
+    width: 100px;
+    height:50px;
+    font-size: 18px;
+}
+
+
+#colorCustom{
+    font-weight: bold;
+    color:rgb(255, 255, 255);
+    background-image: linear-gradient(90deg, rgb(250, 153, 153), rgb(190, 142, 252));
+    border-radius: 30px;
+    width: 100px;
+    height:50px;
+    font-size: 18px;
+}
+
+#eraser{
+    font-weight: bold;
+    color:rgb(255, 255, 255);
+    background-color: rgb(131, 87, 129);
+    border-radius: 30px;
+    width: 100px;
+    height:50px;
+    font-size: 18px;
+}
+
+#restart{
+    font-weight: bold;
+    color:white;
+    background-color: rgb(131, 87, 129);
+    border-radius: 30px;
+    width: 100px;
+    height:50px;
+    font-size: 18px;
+}
+
+
+
+.divGridContainer{
+    border:rgb(105, 105, 102) 3px solid;
+    display: grid;
+    grid-template-columns: repeat(var(--columns),auto);
+    grid-template-rows: repeat(var(--rows),auto);
+    max-width: 580px;
+    min-height: 580px;
+    margin: auto;
+    margin-top:10px ;
+    background-color: white;
+    border-radius: 3px;
+    margin-bottom: 170px;
+}
+
+.cells{
+    border:rgb(241, 241, 241) 0.5px solid;
+}
+
+@media (max-width: 700px){
+    .divGridContainer{
+        border:rgb(105, 105, 102) 3px solid;
+        display: grid;
+        grid-template-columns: repeat(var(--columns),1fr);
+        grid-template-rows: repeat(var(--rows),1fr);
+        max-width: 450px;
+        min-width: 450px;
+        min-height: 450px;
+    }
+
+}
+
+@media (max-width: 300px){
+    .buttonContainer{
+        display: flex;
+        flex-direction:row;
+        justify-content:space-evenly;
+        max-width: 1000px;
+        margin:auto;
+        flex-wrap:nowrap;
+        align-items: center;
+}
+}
+
+.cells:hover{
+    background-color: black;
+}
+
+
